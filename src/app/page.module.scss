@@ -1,0 +1,28 @@
+.page{
+  width: 100dvw;
+  height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  width: 70%;
+  max-width: 768px;
+  height: 40px;
+  background: #171717;
+  border-radius: 5px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input{
+  width: 100dvw;
+  height: 100%;
+}
