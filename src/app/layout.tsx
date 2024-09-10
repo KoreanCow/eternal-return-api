@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
+import { SeasonProvider } from './(home)/components/context/SeasonContext';
+
 
 const dos = localFont({
   src: '../../public/fonts/DOSIyagiBoldface.ttf',
@@ -21,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dos.variable}`}>
-        {children}
+        <SeasonProvider>
+          {children}
+        </SeasonProvider>
       </body>
     </html>
   );

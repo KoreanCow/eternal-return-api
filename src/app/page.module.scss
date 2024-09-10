@@ -1,8 +1,9 @@
 .page{
   width: 100dvw;
-  height: 100dvh;
+  height: 80dvh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -25,4 +26,9 @@
 .input{
   width: 100dvw;
   height: 100%;
+}
+
+.rank {
+  margin-top: 30px;
+  font-size: 12px;
 }
