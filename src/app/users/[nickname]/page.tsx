@@ -4,8 +4,6 @@ export default async function UserPage({ params, }: { params: { nickname: string
 
   const decodedNickname = decodeURI(params.nickname);
 
-
-
   async function getUserNum(nickname: string) {
     const res = await fetch(`${process.env.API_URL}/v1/user/nickname?query=${nickname}`, {
       headers: {
