@@ -1,12 +1,11 @@
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 
 export async function generateMetadata(
   { params }: { params: { nickname: string } },
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const decodedNickname = decodeURI(params.nickname);
   return {
-    title: `${decodedNickname}'s Profile`,
+    title: `${decodedNickname}'s Info`,
     description: `Profile page for user: ${decodedNickname}`
   }
 }
