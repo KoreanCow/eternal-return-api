@@ -7,7 +7,7 @@ export default async function UserPage({ params, }: { params: { nickname: string
 
 
   async function getUserNum(nickname: string) {
-    const res = await fetch(`${process.env.API_URL}/user/nickname?query=${nickname}`, {
+    const res = await fetch(`${process.env.API_URL}/v1/user/nickname?query=${nickname}`, {
       headers: {
         'x-api-key': process.env.API_KEY || '',
         'accept': 'application/json',
