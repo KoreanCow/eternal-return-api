@@ -1,31 +1,19 @@
+'use client';
+
+import { useUserNum } from '../../../../hooks/useUserNum';
 import UserInfo from '../components/UserInfo';
 
-export default async function UserPage({ params, }: { params: { nickname: string } }) {
-
+export default function UserPage({ params }: { params: { nickname: string } }) {
   const decodedNickname = decodeURI(params.nickname);
+  const { userData, loading, error } = useUserNum(decodedNickname);
 
-  async function getUserNum(nickname: string) {
-    const res = await fetch(`${process.env.API_URL}/v1/user/nickname?query=${nickname}`, {
-      headers: {
-        'x-api-key': process.env.API_KEY || '',
-        'accept': 'application/json',
-      }
-    });
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+  if (!userData) return <p>User not found</p>; // userData가 null일 때 처리
 
-    if (!res.ok) {
-      console.error('Failed to fetch UserInfo:', res.statusText);
-      return null;
-    }
-
-    const data = await res.json();
-    return data;
-  }
-
-  const userInfo = await getUserNum(decodedNickname);
   return (
     <>
-      <UserInfo userInfo={userInfo} />
+      <UserInfo userNum={userData} /> {/* userData가 null이 아님을 보장 */}
     </>
-
-  )
+  );
 }
