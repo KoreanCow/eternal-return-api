@@ -10,7 +10,6 @@ export interface RankType {
 export interface RankingType {
   topRanks: RankType[];
 }
-
 export const useRanking = ({ seasonID, mode }: { seasonID: number, mode: number }) => {
   const [ranking, setRanking] = useState<RankType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -18,20 +17,32 @@ export const useRanking = ({ seasonID, mode }: { seasonID: number, mode: number 
 
   useEffect(() => {
     const fetchRanking = async () => {
+      if (seasonID === 0) {
+        setError("Invalid season ID");
+        setLoading(false);
+        return;
+      }
+
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/v1/rank/top/${seasonID}/${mode}`, {
           headers: {
             'x-api-key': process.env.NEXT_PUBLIC_API_KEY || '',
-            'accept': 'application/json'
+            'accept': 'application/json',
           }
         });
 
         if (!res.ok) {
           console.error('Failed to fetch Ranking data');
-          return null;
+          setError(`Error: ${res.statusText}`);
+          return;
         }
 
         const data: RankingType = await res.json();
+
+        if (!data.topRanks || data.topRanks.length === 0) {
+          setError("No ranking data available");
+          return;
+        }
 
         setRanking(data.topRanks.slice(0, 10));
       } catch (err) {
@@ -39,6 +50,7 @@ export const useRanking = ({ seasonID, mode }: { seasonID: number, mode: number 
         setError((err as Error).message);
       } finally {
         setLoading(false);
+        setError(null);
       }
     };
 
@@ -46,4 +58,4 @@ export const useRanking = ({ seasonID, mode }: { seasonID: number, mode: number 
   }, [mode, seasonID]);
 
   return { ranking, loading, error };
-}
+};
