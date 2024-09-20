@@ -1,15 +1,7 @@
 import { useEffect, useState } from 'react';
 
-export interface RankType {
-  userNum: number;
-  nickname: string;
-  rank: number;
-  mmr: number;
+import { RankType, RankListType } from '@/types/home/rank';
 
-}
-export interface RankingType {
-  topRanks: RankType[];
-}
 export const useRanking = ({ seasonID, mode }: { seasonID: number, mode: number }) => {
   const [ranking, setRanking] = useState<RankType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -37,7 +29,7 @@ export const useRanking = ({ seasonID, mode }: { seasonID: number, mode: number 
           return;
         }
 
-        const data: RankingType = await res.json();
+        const data: RankListType = await res.json();
 
         if (!data.topRanks || data.topRanks.length === 0) {
           setError("No ranking data available");
