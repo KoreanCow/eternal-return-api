@@ -1,5 +1,3 @@
-// UserStats.ts
-
 export interface CharacterStat {
   characterCode: number;
   totalGames: number;
@@ -11,7 +9,7 @@ export interface CharacterStat {
   averageRank: number;
 }
 
-export interface UserStat {
+export interface UserStatistics {
   seasonId: number;
   userNum: number;
   matchingMode: number;
@@ -38,8 +36,8 @@ export interface UserStat {
   characterStats: CharacterStat[];
 }
 
-export interface ApiResponse {
+export interface UserStats {
   code: number;
   message: string;
-  userStats: UserStat[];
+  userStats: UserStatistics[];
 }
