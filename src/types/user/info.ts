@@ -4,3 +4,9 @@ export interface UserNum {
     nickname: string;
   }
 }
+
+export interface UserNumState {
+  userNum: UserNum | null;
+  loading: boolean;
+  error: string | null;
+}

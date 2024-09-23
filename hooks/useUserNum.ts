@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 
+import { useEffect, useState } from 'react';
 import { UserNum, UserNumState } from '@/types/user/info';
 
 export const useUserNum = (nickname: string): UserNumState => {
@@ -24,7 +24,7 @@ export const useUserNum = (nickname: string): UserNumState => {
         const data = await res.json();
 
         if (data && data.user) {
-          setUserNum({ userNum: data.user.userNum, nickname: data.user.nickname });
+          setUserNum({ user: { userNum: data.user.userNum, nickname: data.user.nickname } });
         } else {
           setError('유저 데이터를 찾을 수 없습니다.');
         }
