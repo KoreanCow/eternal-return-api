@@ -4,6 +4,7 @@ import { UserNum } from '@/types/user/info';
 import { useFetchData } from '../../../../hooks/useDataFetching';
 import { UserStats } from '@/types/user/stat';
 import { userTier } from '../../../../utils/userTier';
+import CharacterStat from './CharacterStat';
 
 interface UserStatProps {
   userNum: UserNum | null;
@@ -37,7 +38,6 @@ export default function UserStat({ userNum, seasonID }: UserStatProps) {
   if (loading) return <p>Loading User Info...</p>;
   if (error) return <p>Error: {error}</p>;
 
-
   if (!userStat) {
     return <p>No user data available.</p>
   }
@@ -53,6 +53,8 @@ export default function UserStat({ userNum, seasonID }: UserStatProps) {
           </div>
         ))}
       </div>
+      <h1 className={styles.summary}>Character Stat</h1>
+      <CharacterStat characterStat={stats!.characterStats} />
     </div>
   )
 }

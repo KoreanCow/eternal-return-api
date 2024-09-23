@@ -44,3 +44,11 @@
   align-items: center;
   text-align: center;
 }
+
+.character{
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

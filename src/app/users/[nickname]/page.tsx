@@ -17,8 +17,6 @@ export default function UserPage({ params }: { params: { nickname: string } }) {
     `v1/user/nickname?query=${decodedNickname}`,
     'userNum',
   )
-
-  console.log(season);
   return (
     <div className={styles.body}>
       <p className={styles.home} onClick={() => router.push('/')}>Back Space</p>
