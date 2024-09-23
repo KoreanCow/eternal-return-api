@@ -1,0 +1,46 @@
+
+.body{
+  width: 100dvw;
+  max-width: 768px;
+  height: 100dvh;
+}
+
+.home{
+  margin-left: 10px;
+}
+
+.info{
+  width: inherit;
+  margin-top: 20px;
+  @media (min-width: 400px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.stat {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.average {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.statItem {
+  width: 30%;
+  // margin-bottom: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
