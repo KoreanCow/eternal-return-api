@@ -33,7 +33,6 @@ export const SeasonProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         const { data } = await res.json();
         const currentSeason = data.find((season: SeasonType) => season.isCurrent === 1);
         setSeason(currentSeason)
-        console.log(currentSeason);
       } catch (err) {
         console.error('Failed to fetch Season Info:', err);
       }
