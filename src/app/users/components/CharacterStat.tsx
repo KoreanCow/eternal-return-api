@@ -11,7 +11,7 @@ export default function CharacterStat({ characterStat }: CharacterStatProps) {
   return (
     <div className={styles.character}>
       {characterStat.map(stat => (
-        <div key={stat.characterCode}>
+        <div key={stat.characterCode} className={styles.character_item}>
           <p>Character Code: {stat.characterCode}</p>
           <p>Total Games: {stat.totalGames}</p>
           <p>Usages: {stat.usages}</p>

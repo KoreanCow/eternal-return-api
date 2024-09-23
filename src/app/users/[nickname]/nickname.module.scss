@@ -1,12 +1,18 @@
 
 .body{
   width: 100dvw;
-  max-width: 768px;
+  // max-width: 768px;
   height: 100dvh;
 }
-
-.home{
-  margin-left: 10px;
+.toggle{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  // justify-content: space-between;
+}
+.toggle_btn{
+  margin: 10px;
+  cursor: pointer;
 }
 
 .info{
@@ -51,4 +57,38 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  @media (max-width: 500px) {
+    align-items: center;
+    flex-direction: column;
+    div{
+      margin-top: 30px;
+    }
+  } 
+}
+
+/* -----전적 사이드 바 토글 --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -80vw; /* 사이드바가 보이지 않도록 위치 조정 */
+  width: 80vw; /* 화면의 80% 너비 */
+  height: 100%;
+  background-color: #0a0a0a;
+  transition: right 0.3s ease;
+  border-radius: 5px;
+  @media (max-width: 400px) {
+    width: 90vw;
+    right: -90vw;
+  }
+}
+
+.sidebar.open {
+  right: 0; /* 사이드바가 보이도록 위치 조정 */
+}
+
+.closeBtn{
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }

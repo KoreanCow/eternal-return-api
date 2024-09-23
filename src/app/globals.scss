@@ -20,12 +20,12 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-dos); /* 여기에 폰트 변수 적용 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
+  font-family: var(--font-dos); /* 여기에 폰트 변수 적용 */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
