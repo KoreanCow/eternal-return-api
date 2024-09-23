@@ -37,7 +37,7 @@ export default function Rank() {
         {loading && <p>Loading rankings...</p>}
         {error && <p>Error loading rankings: {error}</p>}
         {ranking?.topRanks?.length === 0 && !loading && <p>No rankings available</p>}
-        {ranking?.topRanks?.map((rank) => (
+        {ranking?.topRanks?.slice(0, 10).map((rank) => (
           <div key={rank.userNum} className={styles.rankItem}>
             <h4>Rank: {rank.rank}</h4>
             <p onClick={() => onRankerClick(rank.nickname)}>Nickname: {rank.nickname}</p>
