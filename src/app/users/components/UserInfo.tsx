@@ -1,23 +1,25 @@
 'use client';
+import { UserNum } from '@/types/user/info';
 
-import { useRouter } from 'next/navigation';
-import { UserNumState } from '@/types/user/info';
+import styles from '../[nickname]/nickname.module.scss'
 interface UserInfoProps {
-  userNumState: UserNumState
+  userNum: UserNum | null;
+  loading: boolean;
+  error: string | null;
 }
 
-export default function UserInfo({ userNumState }: UserInfoProps) {
-  const router = useRouter();
+export default function UserInfo({ userNum, loading, error }: UserInfoProps) {
+  if (loading) return <p>Loading User Info...</p>;
+  if (error) return <p>Error: {error}</p>;
 
-  const { userNum, loading, error } = userNumState;
+  if (!userNum || !userNum.user) {
+    return <p>No user data available.</p>;
+  }
 
-  if (loading) return <p>Loading User Info...</p>
-  if (error) return <p>Error: {error}</p>
   return (
-    <div>
-      <p onClick={() => router.push('/')}>Back Space</p>
-      <h2>User Page for {userNum?.nickname}</h2>
-      <h2>User Num: {userNum?.userNum}</h2>
+    <div className={styles.info}>
+      <h2>User Page for {userNum.user.nickname}</h2>
+      <h2>User Num: {userNum.user.userNum}</h2>
     </div>
   );
 }
