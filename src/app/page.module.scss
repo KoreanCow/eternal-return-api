@@ -26,6 +26,7 @@
 .input{
   width: 100dvw;
   height: 100%;
+  color: white;
 }
 
 .season {
@@ -50,4 +51,8 @@
 
 .rankItem{
   margin-bottom: 20px;
+}
+
+.ranker {
+  cursor: pointer;
 }

@@ -40,7 +40,10 @@ export default function Rank() {
         {ranking?.topRanks?.slice(0, 10).map((rank) => (
           <div key={rank.userNum} className={styles.rankItem}>
             <h4>Rank: {rank.rank}</h4>
-            <p onClick={() => onRankerClick(rank.nickname)}>Nickname: {rank.nickname}</p>
+            <p
+              onClick={() => onRankerClick(rank.nickname)}
+              className={styles.ranker}
+            >Nickname: {rank.nickname}</p>
             <p>MMR: {rank.mmr}</p>
           </div>
         ))}
