@@ -66,6 +66,37 @@
   } 
 }
 
+/* -----에러 바운더리 디자인 --- */
+.error_body{
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error_title { 
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.error_text{
+  width: 90%;
+  text-align: center;
+}
+
+.error_btns{
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
 /* -----전적 사이드 바 토글 --- */
 .sidebar {
   position: fixed;
