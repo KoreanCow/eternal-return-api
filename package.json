@@ -9,10 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "i18next": "^23.15.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.6.2",
+    "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.8",
-    "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.78.0"
+    "next-i18n-router": "^5.5.1",
+    "next-i18next": "^15.3.1",
+    "next-intl": "^3.21.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.2",
+    "sass": "^1.78.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/node": "^20",
