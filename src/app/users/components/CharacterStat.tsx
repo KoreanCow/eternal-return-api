@@ -6,8 +6,6 @@ interface CharacterStatProps {
 }
 
 export default function CharacterStat({ characterStat }: CharacterStatProps) {
-
-  console.log(characterStat);
   return (
     <div className={styles.character}>
       {characterStat.map(stat => (
