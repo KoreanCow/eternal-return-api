@@ -1,14 +1,12 @@
 
 .body{
   width: 100dvw;
-  // max-width: 768px;
   height: 100dvh;
 }
 .toggle{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  // justify-content: space-between;
 }
 .toggle_btn{
   margin: 10px;
@@ -101,9 +99,10 @@
 .sidebar {
   position: fixed;
   top: 0;
-  right: -80vw; /* 사이드바가 보이지 않도록 위치 조정 */
-  width: 80vw; /* 화면의 80% 너비 */
+  right: -80vw;
+  width: 80vw;
   height: 100%;
+  overflow-y: auto;
   background-color: #0a0a0a;
   transition: right 0.3s ease;
   border-radius: 5px;
@@ -114,7 +113,7 @@
 }
 
 .sidebar.open {
-  right: 0; /* 사이드바가 보이도록 위치 조정 */
+  right: 0;
 }
 
 .closeBtn{
@@ -122,4 +121,5 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+  color: white;
 }

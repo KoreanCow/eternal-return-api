@@ -53,7 +53,7 @@ export default function UserPage({ params }: { params: { nickname: string } }) {
 
       <UserInfo userNum={userNum} loading={loading} error={error} />
       <UserStat userNum={userNum} seasonID={season?.seasonID ?? null} />
-      <UserMatchResult ref={toggleRef} isOpen={toggleOpen} onClose={() => setToggleOpen(false)} />
+      <UserMatchResult userNum={userNum} ref={toggleRef} isOpen={toggleOpen} onClose={() => setToggleOpen(false)} />
     </div>
   );
 }
