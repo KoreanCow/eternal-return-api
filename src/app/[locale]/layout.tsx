@@ -37,11 +37,11 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${dos.variable}`}>
-        <SeasonProvider>
-          <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages}>
+          <SeasonProvider>
             {children}
-          </NextIntlClientProvider>
-        </SeasonProvider>
+          </SeasonProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

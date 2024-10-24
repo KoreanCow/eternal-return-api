@@ -1,14 +1,10 @@
 'use client';
-// import styles from '@/app/page.module.scss';
-import styles from '@/app/[locale]/page.module.scss'
-import { useRouter } from 'next/navigation';
-
+import styles from '@/app/[locale]/page.module.scss';
 import { RankListType } from '@/types/home/rank';
-
 import { useSeason } from './context/SeasonContext';
 import { useFetchData } from '../../../../../hooks/useDataFetching';
-
 import { useTranslations } from 'next-intl';
+import { useRouter } from '@/i18n/routing';
 
 export default function Rank() {
   const t = useTranslations('HomePage');
@@ -24,10 +20,15 @@ export default function Rank() {
   if (!season) {
     return <p className={styles.season}>Loading...</p>;
   }
+
   const onRankerClick = async (nickname: string) => {
     const trimNickname = nickname.trim();
     if (trimNickname !== '') {
-      router.push(`/users/${trimNickname}`);
+      // 동적 경로를 객체 형식으로 설정합니다.
+      router.push({
+        pathname: '/users/[nickname]',
+        params: { nickname: trimNickname },
+      });
     }
   };
 
