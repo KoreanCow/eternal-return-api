@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "placeholder": "ニックネーム",
+    "CurrentSeason": "現在シーズン",
+    "SeasonId": "シーズン　ID",
+
+    "Rank": "Rank",
+    "Nickname": "Nickname",
+    "MMR": "MMR"
+  }
+
+}

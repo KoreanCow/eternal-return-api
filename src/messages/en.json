@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "placeholder": "user nickname",
+    "CurrentSeason": "Current Season",
+    "SeasonId": "Season ID",
+
+    "Rank": "Rank",
+    "Nickname": "Nickname",
+    "MMR": "MMR"
+  }
+
+}
