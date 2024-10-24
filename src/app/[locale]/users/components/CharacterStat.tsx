@@ -17,6 +17,7 @@ export default function CharacterStat({ characterStat }: CharacterStatProps) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  // 훅을 만들고 안쓴 이유 -> 맵메소드 안에서 훅을 부르면 규칙 위반이라 대체로 여기서 새 코드 작성
   useEffect(() => {
     const fetchCharacterData = async () => {
       try {
