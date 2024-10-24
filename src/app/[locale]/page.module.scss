@@ -56,3 +56,16 @@
 .ranker {
   cursor: pointer;
 }
+
+.LocaleBox{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  justify-content: flex-end;
+  // padding-bottom: 20px;
+  p{
+    margin-right: 20px;
+    font-size: 10px;
+  }
+}

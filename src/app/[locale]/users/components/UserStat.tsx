@@ -1,9 +1,9 @@
 import styles from '../[nickname]/nickname.module.scss'
 
 import { UserNum } from '@/types/user/info';
-import { useFetchData } from '../../../../hooks/useDataFetching';
+import { useFetchData } from '../../../../../hooks/useDataFetching';
 import { UserStats } from '@/types/user/stat';
-import { userTier } from '../../../../utils/userTier';
+import { userTier } from '../../../../../utils/userTier';
 import CharacterStat from './CharacterStat';
 
 interface UserStatProps {

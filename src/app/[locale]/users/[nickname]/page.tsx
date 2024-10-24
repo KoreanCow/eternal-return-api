@@ -3,8 +3,8 @@ import styles from './nickname.module.scss'
 
 import { useRouter } from 'next/navigation';
 import { UserNum } from '@/types/user/info';
-import { useFetchData } from '../../../../hooks/useDataFetching';
-import { useSeason } from '@/app/(home)/components/context/SeasonContext';
+import { useFetchData } from '../../../../../hooks/useDataFetching';
+import { useSeason } from '@/app/[locale]/(home)/components/context/SeasonContext';
 
 import UserInfo from '../components/UserInfo';
 import UserStat from '../components/UserStat';

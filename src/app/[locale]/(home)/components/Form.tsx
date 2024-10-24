@@ -6,8 +6,11 @@ import { useRouter } from 'next/navigation';
 
 import styles from '../../page.module.scss';
 import search from '@/../public/images/icons/search.png'
+import { useTranslations } from 'next-intl';
 
 export default function Form() {
+  const t = useTranslations('HomePage');
+
   const [nickname, setNickname] = useState<string>('');
 
   const router = useRouter();
@@ -31,7 +34,7 @@ export default function Form() {
       <input
         className={styles.input}
         type='text'
-        placeholder='user nickname'
+        placeholder={t('placeholder')}
         value={nickname}
         onChange={(e) => setNickname(e.target.value)}
       />

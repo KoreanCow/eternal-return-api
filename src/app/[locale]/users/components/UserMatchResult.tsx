@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useState } from 'react';
 import styles from '../[nickname]/nickname.module.scss';
 import { UserNum } from '@/types/user/info';
-import { useFetchData } from '../../../../hooks/useDataFetching';
+import { useFetchData } from '../../../../../hooks/useDataFetching';
 import { MatchType } from '@/types/user/match';
 
 interface UserMatchResultProps {

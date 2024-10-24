@@ -1,6 +1,6 @@
 import type { CharacterStat } from '@/types/user/stat';
 import styles from '../[nickname]/nickname.module.scss'
-import { useCharacterInfo } from '../../../../hooks/useCharacter';
+import { useCharacterInfo } from '../../../../../hooks/useCharacter';
 import Image from 'next/image';
 interface CharacterStatProps {
   characterStat: CharacterStat[];
