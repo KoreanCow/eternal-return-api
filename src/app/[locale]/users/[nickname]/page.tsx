@@ -10,8 +10,10 @@ import UserInfo from '../components/UserInfo';
 import UserStat from '../components/UserStat';
 import { useEffect, useRef, useState } from 'react';
 import UserMatchResult from '../components/UserMatchResult';
+import { useTranslations } from 'next-intl';
 
 export default function UserPage({ params }: { params: { nickname: string } }) {
+  const t = useTranslations('UserPage');
   const { season } = useSeason();
   const [toggleOpen, setToggleOpen] = useState<boolean>(false);
 
@@ -46,8 +48,8 @@ export default function UserPage({ params }: { params: { nickname: string } }) {
   return (
     <div className={styles.body}>
       <div className={styles.toggle}>
-        <p className={styles.toggle_btn} onClick={() => router.push('/')}>Back Space</p>
-        <p className={styles.toggle_btn} onClick={() => setToggleOpen(!toggleOpen)}>Match Result</p>
+        <p className={styles.toggle_btn} onClick={() => router.push('/')}>{t('BackSpace')}</p>
+        <p className={styles.toggle_btn} onClick={() => setToggleOpen(!toggleOpen)}>{t('MatchResult')}</p>
 
       </div>
 

@@ -2,6 +2,7 @@ import type { CharacterStat } from '@/types/user/stat';
 import styles from '../[nickname]/nickname.module.scss';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface CharacterInfo {
   code: number;
@@ -13,6 +14,7 @@ interface CharacterStatProps {
 }
 
 export default function CharacterStat({ characterStat }: CharacterStatProps) {
+  const t = useTranslations('UserPage');
   const [characterInfos, setCharacterInfos] = useState<(CharacterInfo | null)[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -63,18 +65,18 @@ export default function CharacterStat({ characterStat }: CharacterStatProps) {
               <Image
                 src={`/images/characters/${characterInfo.name}.png`}
                 alt='character img'
-                width={100}
-                height={100}
+                width={80}
+                height={80}
+              // style={{ objectFit: 'fill' }}
+
               />
             )}
-            <p>Character Code: {stat.characterCode}</p>
             <p>{characterInfo?.name}</p>
-            <p>Total Games: {stat.totalGames}</p>
-            <p>Usages: {stat.usages}</p>
-            <p>Max Killings: {stat.maxKillings}</p>
-            <p>Top 3: {stat.top3}</p>
-            <p>Wins: {stat.wins}</p>
-            <p>Average Rank: {stat.averageRank}</p>
+            <p>{t('Top3')}: {stat.top3}</p>
+            <p>{t('CharacterCode')}: {stat.characterCode}</p>
+            <p>{t('Usages')}: {stat.usages}</p>
+            <p>{t('MaxKillings')}: {stat.maxKillings}</p>
+            <p>{t('CharacterWins')}: {stat.wins}</p>
           </div>
         );
       })}
