@@ -74,7 +74,6 @@ export default function CharacterStat({ characterStat }: CharacterStatProps) {
             <p>Max Killings: {stat.maxKillings}</p>
             <p>Top 3: {stat.top3}</p>
             <p>Wins: {stat.wins}</p>
-            <p>Top 3 Rate: {stat.top3Rate}</p>
             <p>Average Rank: {stat.averageRank}</p>
           </div>
         );

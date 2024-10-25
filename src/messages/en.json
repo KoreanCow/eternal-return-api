@@ -7,6 +7,27 @@
     "Rank": "Rank",
     "Nickname": "Nickname",
     "MMR": "MMR"
-  }
+  },
+  "UserPage": {
+    "BackSpace": "Backspace",
+    "MatchResult": "Match Result",
+    "UserNum": "User Num",
 
+    "UserAverage": "User Average",
+    "Tier": "Tier",
+    "TotalGames": "Total Games",
+    "TotalWins": "Total Wins",
+    "WinningPercentage": "Winning Percentage",
+    "AverageRank": "Average Rank",
+    "AverageKills": "Average Kills",
+    "AverageAssistants": "Average Assistans",
+    "Top2": "Top 2",
+    "Top3": "Top 3",
+    
+    "CharacterStat": "Character Stat",
+    "CharacterCode": "Character Code",
+    "Usages": "Usages",
+    "MaxKillings": "Max Killings",
+    "CharacterWins": "Wins"
+  }
 }

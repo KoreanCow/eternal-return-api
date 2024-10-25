@@ -6,6 +6,28 @@
     "Rank": "ランク",
     "Nickname": "ニックネーム",
     "MMR": "MMR"
+  },
+  "UserPage": {
+    "BackSpace": "ホーム",
+    "MatchResult": "最近ゲームのリザルト",
+    "UserNum": "ユーザーナンバー",
+
+    "UserAverage": "ユーザー統計",
+    "Tier": "ランク",
+    "TotalGames": "プレイ数",
+    "TotalWins": "勝利回数",
+    "WinningPercentage": "勝率",
+    "AverageRank": "平均順位",
+    "AverageKills": "平均キル",
+    "AverageAssistants": "平均アシスト",
+    "Top2": "Top 2",
+    "Top3": "Top 3",
+    
+    "CharacterStat": "実験体統計",
+    "CharacterCode": "実験体コード",
+    "Usages": "プレイ数",
+    "MaxKillings": "最大キル",
+    "CharacterWins": "勝利回数"
   }
 
 }
