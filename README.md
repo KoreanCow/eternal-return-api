@@ -8,10 +8,13 @@
 
 - TypeScript
 - Next.js 14
+- next-intl
 
-- 기술 선정 이유
-  -- Next js 연습 및 활용 중점
-  -- 라이브러리를 이용하지않은 기본기를 위함
+기술 선정 이유
+
+- Next js 연습 및 활용 중점
+- 라이브러리를 이용하지않은 기본기를 위함
+- next-intl을 이용하여 다국어 서비스 지원
 
 # 배포
 
@@ -38,6 +41,7 @@
    -> UserInfo의 프롭스를 Promise 형태로 전달
    -> Promise Result 의 값을 가져오는데 실패함
    이 부분에서 추후 리팩토링이 필요함
+2. 다른 언어 및 주소 접근시 리다이렉팅 필요
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
