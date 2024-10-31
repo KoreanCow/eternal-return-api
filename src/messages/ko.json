@@ -29,6 +29,20 @@
     "Usages": "게임 수",
     "MaxKillings": "최대 킬",
     "CharacterWins": "승리 횟수"
+  },
+  "MatchResult" : {
+    "GameID": "게임ID",
+    "MatchingMode": "매칭 모드",
+    "Character": "실험체",
+    "GameRank": "등 수",
+    "PlayerKills": "킬 수",
+    "PlayerAssistants": "어시스트",
+    "PlayTime": "게임 시간",
+    "Damage": "딜량",
+    "TeamKill": "팀 킬수",
+    "StartRouteID": "루트번호",
+    "Date": "날짜"
+
   }
 
 }

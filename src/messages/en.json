@@ -29,5 +29,19 @@
     "Usages": "Usages",
     "MaxKillings": "Max Killings",
     "CharacterWins": "Wins"
+  },
+  "MatchResult" : {
+    "GameID": "GameID",
+    "MatchingMode": "Matching Mode",
+    "Character": "Character",
+    "GameRank": "Game Rank",
+    "PlayerKills": "Player Kills",
+    "PlayerAssistants": "Player Assistans",
+    "PlayTime": "Play Time",
+    "Damage": "Damage",
+    "TeamKill": "Team Kill",
+    "StartRouteID": "Start Route ID",
+    "Date": "Date"
+
   }
 }
