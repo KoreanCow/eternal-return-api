@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useCharacterInfo = (characterCode: number) => {
+export const useCharacter = (characterCode: number) => {
   const [characterInfo, setCharacterInfo] = useState<{ code: number; name: string } | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
