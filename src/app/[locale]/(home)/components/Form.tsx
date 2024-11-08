@@ -19,7 +19,6 @@ export default function Form() {
     const trimNickname = nickname.trim();
 
     if (trimNickname !== '') {
-      // 동적 경로를 객체 형식으로 설정합니다.
       router.push({
         pathname: '/users/[nickname]',
         params: { nickname: trimNickname },

@@ -32,6 +32,8 @@
   "MatchResult" : {
     "GameID": "ゲームID",
     "MatchingMode": "マーチングモード",
+    "Normal": "一般",
+    "Rank": "ランク",
     "Character": "実験体",
     "GameRank": "順位",
     "PlayerKills": "キル",

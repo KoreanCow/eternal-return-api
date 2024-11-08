@@ -123,3 +123,19 @@
   cursor: pointer;
   color: white;
 }
+
+/* ----- 매칭 데이터 디자인 --- */
+
+.matchBox {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.matchLeft{
+  display: flex;
+  flex-direction: column;
+}

@@ -33,6 +33,8 @@
   "MatchResult" : {
     "GameID": "게임ID",
     "MatchingMode": "매칭 모드",
+    "Normal": "일반",
+    "Rank": "랭크",
     "Character": "실험체",
     "GameRank": "등 수",
     "PlayerKills": "킬 수",

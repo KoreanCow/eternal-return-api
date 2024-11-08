@@ -33,6 +33,8 @@
   "MatchResult" : {
     "GameID": "GameID",
     "MatchingMode": "Matching Mode",
+    "Normal": "Normal",
+    "Rank": "Rank",
     "Character": "Character",
     "GameRank": "Game Rank",
     "PlayerKills": "Player Kills",
