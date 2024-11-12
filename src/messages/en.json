@@ -44,6 +44,15 @@
     "TeamKill": "Team Kill",
     "StartRouteID": "Start Route ID",
     "Date": "Date"
-
+  }, 
+  "Weather": {
+    "10001": "Cloudy",
+    "10002": "Clear",
+    "10003": "Rain",
+    "10004": "Sandstorm",
+    "10501": "Calm",
+    "10502": "Foggy",
+    "10503": "Windy",
+    "10504": "Thunderstorm"
   }
 }
