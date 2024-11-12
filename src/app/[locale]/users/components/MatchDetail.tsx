@@ -2,6 +2,7 @@ import React from 'react';
 import { MatchType } from '@/types/user/match';
 import styles from '../[nickname]/nickname.module.scss';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 interface MatchDetailProps {
   game: MatchType['userGames'][number];
@@ -26,36 +27,46 @@ export default function MatchDetail({ game }: MatchDetailProps) {
 
     return `${year}-${month}-${day} ${hours}:${minutes}`;
   }
+  console.log(game.traitFirstSub)
   return (
     <div className={styles.matchBox}>
-      <div className={styles.matchLeft}>
-        <p>Game Rank: {game.gameRank}</p>
-        <p>{t('MatchingMode')}: {game.matchingMode === 2 ? t('Normal') : t('Rank')}</p>
-        <p>Play Time: {formatTime(game.playTime)}</p>
+      <div className={styles.matchTop}>
+        <p>#{game.gameRank}</p>
+        <p>{game.matchingMode === 2 ? t('Normal') : t('Rank')}</p>
+        <p>{formatTime(game.playTime)}</p>
         <p>{formatDate(game.startDtm)}</p>
       </div>
       <div className={styles.matchMiddle}>
-        <p>Game ID: {game.gameId}</p>
+        <div className={styles.matchContent}>
+          <p>Game ID: {game.gameId}</p>
 
-        <p>Character Level: {game.characterLevel}</p>
-        <p>Character Number: {game.characterNum}</p>
+          <p>Character Level: {game.characterLevel}</p>
+          <p>Character Number: {game.characterNum}</p>
+          <Image
+            className={styles.tacticalSkillsImage}
+            src={`/images/trait/${game.traitFirstCore}.png`}
+            alt='Trait Image'
+            width={30}
+            height={30}
+          /><Image
+            className={styles.tacticalSkillsImage}
+            src={`/images/tacticalSkills/${game.tacticalSkillGroup}.png`}
+            alt='Trait Image'
+            width={30}
+            height={30}
+          />
+          <p>{game.teamKill} / {game.playerKill} / {game.playerAssistant}</p>
+          <p>TK / K / A</p>
+          <p>Damage to Player: {game.damageToPlayer}</p>
 
-        <p>Team Kills: {game.teamKill}</p>
-        <p>Player Kills: {game.playerKill}</p>
-        <p>Player Assists: {game.playerAssistant}</p>
-        <p>Damage to Player: {game.damageToPlayer}</p>
-
+        </div>
+        <div className={styles.matchddd}>
+          <p>Main Weather: {game.mainWeather}</p>
+          <p>Sub Weather: {game.subWeather}</p>
+          <p>Start Route ID: {game.routeIdOfStart}</p>
+        </div>
       </div>
-      <div className={styles.matchRight}>
-        <p>Main Weather: {game.mainWeather}</p>
-        <p>Sub Weather: {game.subWeather}</p>
-        <p>Start Route ID: {game.routeIdOfStart}</p>
-        <p>First Core Trait: {game.traitFirstCore}</p>
-        <p>First Sub Trait: {game.traitFirstSub}</p>
-        <p>Second Sub Trait: {game.traitSecondSub}</p>
-        <p>Tactical Skill Group: {game.tacticalSkillGroup}</p>
 
-      </div>
     </div>
   );
 }
